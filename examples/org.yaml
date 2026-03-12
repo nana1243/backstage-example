@@ -3,9 +3,12 @@
 apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
-  name: guest
+  name: nana1243
 spec:
+  profile:
+    displayName: HeuiEun Choi
   memberOf: [guests]
+
 ---
 # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-group
 apiVersion: backstage.io/v1alpha1
