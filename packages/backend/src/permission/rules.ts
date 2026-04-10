@@ -8,6 +8,6 @@ export type PermissionRule = (user: PolicyQueryUser) => boolean;
 
 export const PERMISSION_RULES: Record<string, PermissionRule> = {
     'admin-panel.view': (user) => isAdmin(user),
-    'catalog.entity.delete': (user) => !!(isAdmin(user) || isTeamLeader(user)),
+    'catalog.entity.delete': (user) => (isAdmin(user) || isTeamLeader(user)),
     'scaffolder.task.create': (user) => !isLgePartners(user),
 };
