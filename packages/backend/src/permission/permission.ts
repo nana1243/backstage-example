@@ -8,18 +8,8 @@ import {
     PolicyQuery,
     PolicyQueryUser,
 } from '@backstage/plugin-permission-node';
+import {PERMISSION_RULES} from "./rules";
 
-import isAdmin from "../utils/isAdmin";
-import isLgePartners from "../utils/isLgePartners";
-import isTeamLeader from "../utils/isTeamLeader";
-
-
-type PermissionRule = (user: PolicyQueryUser) => boolean;
-const PERMISSION_RULES: Record<string, PermissionRule> = {
-    'admin-panel.view': (user) => isAdmin(user),
-    'catalog.entity.delete': (user) => !!(isAdmin(user) || isTeamLeader(user)),
-    'scaffolder.task.create': (user) => !isLgePartners(user),
-};
 
 class CentralPermissionPolicy implements PermissionPolicy {
 
