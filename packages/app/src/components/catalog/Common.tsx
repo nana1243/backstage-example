@@ -8,7 +8,7 @@ import {
     hasRelationWarnings,
     isOrphan
 } from "@backstage/plugin-catalog";
-import {Grid} from "@material-ui/core";
+import {Button, Grid} from "@material-ui/core";
 import {EntityCatalogGraphCard} from "@backstage/plugin-catalog-graph";
 import {EntityTechdocsContent} from "@backstage/plugin-techdocs";
 import {TechDocsAddons} from "@backstage/plugin-techdocs-react";

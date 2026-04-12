@@ -6,6 +6,7 @@ import {
     EntityConsumingComponentsCard,
     EntityProvidingComponentsCard
 } from "@backstage/plugin-api-docs";
+import {Grid} from "@material-ui/core";
 
 export const ApiPage = (
     <EntityLayout>
